@@ -278,208 +278,16 @@ _hsp.push(['addPrivacyConsentListener', function(consent){
 
 <!-- /Added by GoogleTagManager integration -->
 
-    <link rel="canonical" href="https://cl-ai-governance.netlify.app/ai-policy-philosophy.html">
+    <link rel="canonical" href="https://www.carnegielearning.com/ai-policy-philosophy">
 
 <!-- Website font styles -->
 <link rel="stylesheet" href="https://use.typekit.net/wat1ftj.css">
 <link rel="stylesheet" href="https://www.carnegielearning.com/hubfs/3PCSS/font-awesome/css/font-awesome.min.css">
 
-<!-- OneTrust Cookies Consent Notice start for carnegielearning.com -->
-<!-- <script type="text/javascript" src="https://cdn.cookielaw.org/consent/16aaf842-eb00-470e-bfe8-734b7d8fa13f/OtAutoBlock.js" ></script> -->
-<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8" data-domain-script="16aaf842-eb00-470e-bfe8-734b7d8fa13f"></script>
-<script type="text/javascript">
-    function disableCookieBanner() {
-        const cookieString = document.cookie;
-        const gpcEnabledRegex = /OptanonConsent=.*isGpcEnabled=1/;
-        const c0004Regex = /OptanonConsent=.*C0004%3A0/;
-
-        return gpcEnabledRegex.test(cookieString) || c0004Regex.test(cookieString);
-    }
-
-    if (disableCookieBanner()) {
-        window.disableHubSpotCookieBanner = true;
-    }
-
-    function OptanonWrapper() {
-        let hsConsent = {
-            analytics: window.OnetrustActiveGroups.includes("C0002"),
-            advertisement: window.OnetrustActiveGroups.includes("C0004"),
-            functionality: window.OnetrustActiveGroups.includes("C0003")
-        };
-        
-        let hsConsentString = `1:${hsConsent.analytics}_2:${hsConsent.advertisement}_3:${hsConsent.functionality}`;
-        const SIX_MONTHS_IN_SECONDS = 60 * 60 * 24 * 30 * 6;
-        let cookies = Object.fromEntries(
-            document.cookie.split(";")
-                .filter(r => r.includes('='))
-                .map(e => e.split("=")
-                    .map(decodeURIComponent)
-                )
-        );
-        
-        let makeGtagPermission = function (group) {
-            if (window.OnetrustActiveGroups.includes(group)) {
-                return "granted";
-            }
-            return "denied";
-        }
-        
-        let changeHsCookiePref = function(newPrefs) {
-            if (!document.cookie.includes("__hs_cookie_cat_pref")) {
-                return true;
-            }
-            let browserCookies = Object.fromEntries(document.cookie.split("; ").map(a=>a.split("=").map(decodeURIComponent)));
-            return browserCookies["__hs_cookie_cat_pref"] != newPrefs;
-        };
-
-        let gtagConsent = {
-            'analytics_storage': makeGtagPermission("C0002"),
-            'ad_storage': makeGtagPermission("C0004"),
-            'ad_user_data': makeGtagPermission("C0004"),
-            'ad_personalization': makeGtagPermission("C0004")
-        };
-        var _hsp = window._hsp = window._hsp || [];
-        var _hsq = window._hsq = window._hsq || [];
-        if (!window.OnetrustActiveGroups.includes("C0004")) {
-            window.disableHubSpotCookieBanner = true;
-            _hsp.push(['revokeCookieConsent']);
-            _hsq.push(['doNotTrack']);
-            console.log("Adding do not track cookie.");
-            document.cookie = `__hs_do_not_track=yes; Max-Age=${SIX_MONTHS_IN_SECONDS}; Domain=.carnegielearning.com; SameSite=Lax; path=/; Secure`;
-            if (changeHsCookiePref(hsConsentString)) {
-                document.cookie = `__hs_cookie_cat_pref=${hsConsentString}; Max-Age=${SIX_MONTHS_IN_SECONDS}; Domain=.carnegielearning.com; SameSite=Lax; path=/; Secure`;
-            }
-            window['ga-disable-G-264103380'] = true;
-        } else {
-            _hsq.push(['doNotTrack', {track: true}]);
-            console.log("Removing do not track cookie");
-            document.cookie = `__hs_do_not_track=; Max-Age=-99999999; Domain=.carnegielearning.com; SameSite=Lax; path=/; Secure`;
-            if (window.disabledHubSpotCookieBanner) {
-                delete window.disableHubSpotCookieBanner;
-            }
-            delete window['ga-disable-G-264103380'];
-            if (changeHsCookiePref(hsConsentString)) {
-                document.cookie = `__hs_cookie_cat_pref=${hsConsentString}; Max-Age=${SIX_MONTHS_IN_SECONDS}; Domain=.carnegielearning.com; SameSite=Lax; path=/; Secure`;
-            }
-        }
-        _hsp.push(['setHubSpotConsent'], hsConsent);
-        gtag('consent', 'update', gtagConsent);
-
-        const eraseCookie = function (name) {
-            const EXPIRED = "Max-Age=-99999999; expires=Thu, 01 Jan 1970 00:00:00 GMT";
-            const host = window.location.hostname;
-            const dotHost = `.${host.split(".").slice(-2).join(".")}`;
-
-            const remCookie = (base) => {
-                document.cookie = `${base}; Domain=${host}`;
-                document.cookie = `${base}; Domain=${dotHost}`;
-                document.cookie = `${base}`;
-            };
-
-            if (name.startsWith("_ga_") || name.startsWith("_gat_")) {
-                let gaCookies = Object.keys(Object.fromEntries(
-                    document.cookie.split("; ")
-                        .filter(r => r.includes('='))
-                        .map(e => e.split("=")
-                            .map(decodeURIComponent)
-                        )
-                )).filter(a => a.startsWith("_ga_") || a.startsWith("_gat_"));
-                for (let i = 0; i < gaCookies.length; i++) {
-                    let cook = gaCookies[i];
-                    console.log(`otDeleteCookie (_ga): ${cook}`);
-                    remCookie(`${cook}=; Path=/; ${EXPIRED}`);
-                }
-                return;
-            }
-            else if (name.startsWith("_hjSession")) {
-                let hjCookies = Object.keys(Object.fromEntries(
-                    document.cookie.split("; ")
-                        .filter(r => r.includes('='))
-                        .map(e => e.split("=")
-                            .map(decodeURIComponent)
-                        )
-                )).filter(a => a.startsWith("_hjSession"));
-                for (let i = 0; i < hjCookies.length; i++) {
-                    let cook = hjCookies[i];
-                    console.log(`otDeleteCookie (_hjSession): ${cook}`);
-                    remCookie(`${cook}=; Path=/; ${EXPIRED}`);
-                }
-                return;
-            }
-
-            localStorage.removeItem(name);
-            remCookie(`${name}=; Path=/; ${EXPIRED}`);
-            
-            window.location.pathname
-                .split("/")
-                .filter(Boolean)
-                .reduce((acc, seg) => {
-                    const currentPath = `${acc}/${seg}`;
-                    remCookie(`${name}=; Path=${currentPath}; ${EXPIRED}`);
-                    remCookie(`${name}=; Path=${currentPath}/; ${EXPIRED}`);
-                    return currentPath;
-                }, "");
-        };
-
-        const otGetInactiveId = function (customIniId, otActiveGrp) {
-            const activeSet = new Set(otActiveGrp.split(",").filter(Boolean));
-            return customIniId
-                .split(",")
-                .filter(Boolean)
-                .filter(id => !activeSet.has(id));
-        };
-
-        const otDeleteCookie = function (iniOptGrpId) {
-            const domainData = window.Optanon.GetDomainData();
-            if (!domainData || !domainData.Groups) {
-                return;
-            }
-
-            const otDeletedGrpIds = otGetInactiveId(iniOptGrpId, window.OnetrustActiveGroups);
-            if (otDeletedGrpIds.length === 0) {
-                return;
-            }
-
-            domainData.Groups.forEach(group => {
-                const isCustomGroupMatch = group.CustomGroupId && otDeletedGrpIds.includes(group.CustomGroupId);
-                if (isCustomGroupMatch && group.Cookies) {
-                    group.Cookies.forEach(cookie => {
-                        if (cookie.Name != "__hs_do_not_track") {
-                            console.log(`otDeleteCookie (Group): ${cookie.Name}`);
-                            eraseCookie(cookie.Name);
-                        }
-                    });
-                }
-
-                if (group.Hosts && group.Hosts.length > 0) {
-                    group.Hosts.forEach(host => {
-                        if (otDeletedGrpIds.includes(host.HostId) && host.Cookies) {
-                            host.Cookies.forEach(cookie => {
-                                if (cookie.Name != "__hs_do_not_track") {
-                                    console.log(`otDeleteCookie (Host): ${cookie.Name}`);
-                                    eraseCookie(cookie.Name);
-                                }
-                            });
-                        }
-                    });
-                }
-            });
-        };
-
-        if (typeof window.otIniGrps === 'undefined') {
-            window.otIniGrps = window.OnetrustActiveGroups;
-        }
-
-        if (otDeleteCookie) {
-            otDeleteCookie(window.otIniGrps);
-        } else {
-            console.log("otDeleteCookie not defined.");
-        }
-
-        window.otIniGrps = window.OnetrustActiveGroups;
-    }
+<!-- Cookie notice disabled for Netlify mini-site preview -->
+<script>
+  window.disableHubSpotCookieBanner = true;
 </script>
-<!-- OneTrust Cookies Consent Notice end for carnegielearning.com -->
 
 <script>
 document.addEventListener('DOMContentLoaded', () => {
@@ -518,7 +326,7 @@ document.addEventListener('DOMContentLoaded', () => {
 <meta name="twitter:image" content="https://www.carnegielearning.com/hubfs/Website%20Assets/2025-CL-Security-Page-Graphic.png">
 
 
-<meta property="og:url" content="https://cl-ai-governance.netlify.app/ai-policy-philosophy.html">
+<meta property="og:url" content="https://www.carnegielearning.com/ai-policy-philosophy">
 <meta name="twitter:card" content="summary_large_image">
 <meta http-equiv="content-language" content="en">
 
@@ -576,7 +384,7 @@ document.addEventListener('DOMContentLoaded', () => {
 				<div class="bottom-nav-col-left">
 					
 					
-					<a href="./index.html" class="logo--header">
+					<a href="https://www.carnegielearning.com/?hsLang=en" class="logo--header">
 						<span class="logo" style="background: url('https://www.carnegielearning.com/hubfs/Carnegie_img_23/header-logo-black1.svg') no-repeat center left / contain;"></span>
 						<span class="sr-only">Carnegie Learning</span>
 					</a>
@@ -975,7 +783,7 @@ document.addEventListener('DOMContentLoaded', () => {
 <div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text">
 <h3>Our commitment</h3>
 <p>Our AI governance process includes review, documentation, release controls, and ongoing monitoring so that AI use in customer-facing products and content remains transparent, accountable, and auditable. As AI capabilities evolve, we will continue to refine our practices while staying grounded in our mission: helping students learn, supporting educators, and delivering high-quality instructional experiences built on trust.</p>
-<p>For more information about how we protect customer data, visit our <a href="./index.html" rel="noopener">Security Practices</a>, <a href="./privacy-policy.html" rel="noopener">Privacy Policy</a>, and <a href="./terms-of-use.html" rel="noopener">Terms of Use</a>.</p>
+<p>For more information about how we protect customer data, visit our <a href="https://www.carnegielearning.com/security-practices?hsLang=en" rel="noopener">Security Practices</a>, <a href="https://www.carnegielearning.com/privacy-policy/?hsLang=en" rel="noopener">Privacy Policy</a>, and <a href="https://www.carnegielearning.com/terms-of-use/?hsLang=en" rel="noopener">Terms of Use</a>.</p>
 </span></div>
 
 </div><!--end widget-span -->
@@ -1129,10 +937,10 @@ document.addEventListener('DOMContentLoaded', () => {
 			<div class="copy_text">© 2026 Carnegie Learning, Inc.</div>
 			<div class="copy_text"><ul class="pipe-list">
 <li><button class="ot-sdk-show-settings text-black btn btn-link">Do Not Sell My Personal Information</button></li>
-<li><a class="text-black" href="./privacy-policy.html">Privacy Policy</a></li>
-<li><a class="text-black" href="./terms-of-use.html">Terms of Use</a></li>
-<li><a href="./index.html" rel="noopener">Security Practices</a></li>
-<li><a href="./ai-policy-philosophy.html" rel="noopener">Approach to AI</a></li>
+<li><a class="text-black" href="/privacy-policy/?hsLang=en">Privacy Policy</a></li>
+<li><a class="text-black" href="/terms-of-use/?hsLang=en">Terms of Use</a></li>
+<li><a href="https://www.carnegielearning.com/security-practices" rel="noopener">Security Practices</a></li>
+<li><a href="https://www.carnegielearning.com/ai-policy-philosophy/?hsLang=en" rel="noopener">Approach to AI</a></li>
 </ul></div>
 		</div>
 
@@ -1247,7 +1055,7 @@ var hsVars = hsVars || {}; hsVars['language'] = 'en';
 <script type="text/javascript">
 var _hsq = _hsq || [];
 _hsq.push(["setContentType", "landing-page"]);
-_hsq.push(["setCanonicalUrl", "https:\/\/cl-ai-governance.netlify.app\/ai-policy-philosophy.html"]);
+_hsq.push(["setCanonicalUrl", "https:\/\/www.carnegielearning.com\/ai-policy-philosophy"]);
 _hsq.push(["setPageId", "185995193393"]);
 _hsq.push(["setContentMetadata", {
     "contentPageId": 185995193393,
