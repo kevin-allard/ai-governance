@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>Our Commitments | Carnegie Learning</title>
+<meta content="Carnegie Learning commitments to accessibility, responsible AI, privacy, and security." name="description"/>
+<link href="https://www.carnegielearning.com/hubfs/Icons%20and%20Logos/Logos/favicon.ico" rel="shortcut icon"/>
+<link href="https://use.typekit.net/wat1ftj.css" rel="stylesheet"/>
+<style>
+:root{
+  --navy:#101223;
+  --blue:#4264d9;
+  --blue-dark:#2848b2;
+  --sky:#cfe3f3;
+  --gray:#edeef2;
+  --line:#d8dbe3;
+  --text:#101223;
+  --muted:#515564;
+  --white:#fff;
+  --max:1170px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--text);font-family:Arial,Helvetica,sans-serif;line-height:1.6;background:#fff}
+a{color:var(--blue-dark)}
+a:hover{text-decoration:none}
+a:focus-visible,button:focus-visible{outline:3px solid var(--blue);outline-offset:4px}
+.skip{position:absolute;left:-9999px;top:8px;background:#fff;padding:10px 14px;z-index:1000}
+.skip:focus{left:12px}
+.wrap{width:min(var(--max),calc(100% - 64px));margin:0 auto}
+.site-header{border-top:7px solid var(--navy);background:#fff;box-shadow:0 2px 7px #10122318;position:sticky;top:0;z-index:50}
+.site-header__inner{height:94px;display:flex;align-items:center;gap:34px}
+.logo{display:flex;align-items:center;text-decoration:none;flex:0 0 220px;height:72px;overflow:hidden}
+.logo img{display:block;max-width:100%;width:auto;height:54px;object-fit:contain;object-position:left center}
+.main-nav{display:flex;align-items:center;gap:30px;margin-left:auto}
+.main-nav a{font-weight:700;text-decoration:none;color:var(--navy);font-size:15px}
+.main-nav a:hover,.main-nav a.current{color:var(--blue-dark)}
+.talk{border:2px solid var(--navy);border-radius:28px;padding:10px 20px;color:var(--navy)!important;text-transform:uppercase;letter-spacing:.04em;font-size:13px!important}
+.menu-btn{display:none;margin-left:auto;background:transparent;border:1px solid var(--line);padding:8px 11px}
+.commitment-nav{background:var(--gray);border-top:1px solid #e2e4ea;border-bottom:1px solid var(--line)}
+.commitment-tabs{display:flex;gap:34px;overflow:auto;scrollbar-width:thin}
+.commitment-tab{appearance:none;border:0;border-bottom:4px solid transparent;background:transparent;padding:17px 0 13px;font-weight:700;color:var(--navy);font-size:14px;white-space:nowrap;cursor:pointer}
+.commitment-tab[aria-selected="true"]{border-color:var(--blue);color:var(--blue-dark)}
+.panel{display:none!important}.panel.is-active{display:block!important}
+.hero{background:var(--gray);padding:72px 0 68px}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(290px,.7fr);gap:70px;align-items:center}
+.eyebrow{text-transform:uppercase;letter-spacing:.12em;font-size:12px;font-weight:700;color:var(--blue-dark);margin:0 0 18px}
+h1,h2{font-family:'circe-slab-a',Rockwell,'Iowan Old Style',Georgia,serif;font-weight:400;color:var(--navy);letter-spacing:-.025em}
+h1{font-size:clamp(48px,5.6vw,76px);line-height:1.05;margin:0 0 22px}
+h2{font-size:clamp(32px,3.5vw,46px);line-height:1.12;margin:0 0 20px}
+h3{font-family:Arial,Helvetica,sans-serif;font-size:22px;line-height:1.25;margin:0 0 12px;color:var(--navy)}
+.lead{font-family:'circe-slab-a',Rockwell,'Iowan Old Style',Georgia,serif;font-size:27px;line-height:1.45;margin:0 0 15px}
+.intro{font-size:18px;color:var(--muted);max-width:720px;margin:0}
+.hero-card{background:var(--blue);color:#fff;padding:38px 36px;min-height:300px;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden}
+.hero-card:before{content:"";position:absolute;width:210px;height:210px;background:#ffffff1d;transform:rotate(45deg);right:-80px;top:-60px}
+.hero-card small{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.14em;font-weight:700;margin-bottom:12px;position:relative}
+.hero-card strong{display:block;font-family:'circe-slab-a',Rockwell,Georgia,serif;font-weight:400;font-size:33px;line-height:1.12;position:relative}
+.hero-card p{font-size:14px;line-height:1.6;margin:16px 0 0;position:relative}
+.section{padding:72px 0}
+.section.soft{background:#f7f8fa}
+.section-head{display:grid;grid-template-columns:1.2fr .8fr;gap:70px;align-items:start;margin-bottom:34px}
+.section-head p{color:var(--muted);font-size:17px;margin:0}
+.four{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px}
+.pillar{border-top:3px solid var(--blue);padding-top:20px}
+.pillar .num{display:block;color:var(--blue-dark);font-size:12px;letter-spacing:.08em;font-weight:700;margin-bottom:26px}
+.pillar p{color:var(--muted);margin:0}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
+.card{background:#fff;border-top:3px solid var(--blue);box-shadow:0 3px 16px #1012230b;padding:32px}
+.card .label{display:block;text-transform:uppercase;letter-spacing:.12em;font-size:11px;font-weight:700;color:var(--blue-dark);margin-bottom:15px}
+.card p{color:var(--muted);margin:0 0 12px}
+.card p:last-child{margin-bottom:0}
+.link-row{display:flex;gap:18px;flex-wrap:wrap;margin-top:20px}
+.button{display:inline-flex;align-items:center;gap:8px;background:var(--navy);color:#fff;text-decoration:none;border:2px solid var(--navy);border-radius:28px;padding:11px 22px;text-transform:uppercase;font-size:12px;letter-spacing:.05em;font-weight:700}
+.button.secondary{background:#fff;color:var(--navy)}
+.note{border-left:3px solid var(--blue);padding-left:18px;color:var(--muted);margin:26px 0 0}
+.band{background:var(--sky);padding:42px 0}
+.band .wrap{display:flex;align-items:center;justify-content:space-between;gap:30px}
+.band h2{font-size:34px;margin-bottom:8px}
+.band p{margin:0;color:var(--muted)}
+.footer{background:var(--navy);color:#fff;padding:34px 0}
+.footer .wrap{display:flex;justify-content:space-between;gap:24px;font-size:13px}
+.footer a{color:#fff}
+.placeholder{background:#fff;border:1px dashed #aeb4c1;padding:24px;color:var(--muted)}
+@media(max-width:980px){
+  .main-nav{display:none}.menu-btn{display:block}.site-header__inner{height:82px}.logo{flex-basis:180px;height:62px}.logo img{max-width:100%;width:auto;height:46px}
+  .hero-grid,.section-head{grid-template-columns:1fr}.hero-card{display:none}.four{grid-template-columns:1fr 1fr}
+}
+@media(max-width:680px){
+  .wrap{width:calc(100% - 36px)}.hero{padding:48px 0}.section{padding:48px 0}.four,.cards{grid-template-columns:1fr}.band .wrap,.footer .wrap{flex-direction:column;align-items:flex-start}.commitment-tabs{gap:24px}
+}
+@media print{.site-header,.commitment-nav,.band{display:none}.panel{display:block!important}.hero{background:#fff;padding:24px 0}.section{padding:28px 0}.wrap{width:100%}.panel{break-before:page}}
+
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:28px}.team{background:var(--navy);color:white;padding:40px;display:grid;grid-template-columns:1fr 1.15fr;gap:50px;margin-top:30px}.team p{color:#eef0f6}.chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:18px}.chips span{border:1px solid #858998;border-radius:30px;padding:6px 12px;font-size:12px}.faq{max-width:900px}.faq details{border-bottom:1px solid var(--line);padding:20px 0}.faq summary{font-weight:700;cursor:pointer;font-size:18px}.faq details p{color:var(--muted);margin:16px 0 0}.actions{display:flex;gap:18px;flex-wrap:wrap;margin-top:26px}.textlink{color:var(--blue-dark);font-weight:700}.section .button{cursor:pointer}.principle-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}.principle-card{background:#fff;border-top:3px solid var(--blue);box-shadow:0 3px 16px #1012230b;padding:30px}.principle-card p{color:var(--muted);margin:0}.principle-card .label{display:block;text-transform:uppercase;letter-spacing:.12em;font-size:11px;font-weight:700;color:var(--blue-dark);margin-bottom:15px}@media(max-width:680px){.grid2,.team,.principle-grid{grid-template-columns:1fr}}
+</style>
+<style>
+/* Migrated current-page content */
+.document-shell{padding:58px 0 72px}
+.document-intro{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;margin-bottom:28px}
+.document-intro p{max-width:620px;color:var(--muted);margin:0}
+.document-jump{display:flex;gap:12px;flex-wrap:wrap;margin:0 0 34px}
+.policy-document{max-width:1000px;margin:0 auto 56px;background:#fff;border-top:4px solid var(--blue);box-shadow:0 4px 22px #10122310;padding:42px 48px}
+.policy-document:last-child{margin-bottom:0}
+.policy-document h1{font-size:42px!important;line-height:1.12!important;margin:0 0 24px!important}
+.policy-document h2{font-size:30px!important;line-height:1.2!important;margin:34px 0 16px!important}
+.policy-document h3{font-family:'circe-slab-a',Rockwell,Georgia,serif!important;font-weight:400!important;font-size:28px!important;line-height:1.2!important;margin:32px 0 14px!important}
+.policy-document h4,.policy-document h5{font-family:Arial,Helvetica,sans-serif!important;color:var(--navy)!important;font-weight:700!important;font-size:19px!important;line-height:1.35!important;margin:28px 0 10px!important}
+.policy-document p,.policy-document li{font-size:16px!important;line-height:1.7!important;color:var(--text)!important}
+.policy-document p{margin:0 0 16px!important}
+.policy-document ul,.policy-document ol{margin:0 0 20px!important;padding-left:24px!important}
+.policy-document table{width:100%!important;border-collapse:collapse!important;margin:24px 0!important;font-size:14px!important;display:block;overflow:auto}
+.policy-document th,.policy-document td{border:1px solid var(--line)!important;padding:10px 12px!important;vertical-align:top!important}
+.policy-document a{color:var(--blue-dark)!important;text-decoration:underline;text-underline-offset:3px}
+
+
+.policy-label{display:inline-block;text-transform:uppercase;letter-spacing:.12em;font-size:11px;font-weight:700;color:var(--blue-dark);margin-bottom:14px}
+.policy-divider{border:0;border-top:1px solid var(--line);margin:54px 0}
+@media(max-width:680px){.policy-document{padding:28px 22px}.policy-document h1{font-size:34px!important}.policy-document h2{font-size:27px!important}.document-intro{display:block}.document-intro p{margin-top:12px}}
+
+.ai-overview{padding:62px 0 20px}
+.ai-overview .section-head{margin-bottom:28px}
+.principle-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-top:26px}
+.principle-card{background:#fff;border-top:3px solid var(--blue);padding:28px;box-shadow:0 3px 15px #1012230a}
+.principle-card h3{margin-bottom:10px}.principle-card p{color:var(--muted);margin:0}
+.ai-detail{padding:56px 0}
+.ai-detail.soft{background:var(--paper)}
+.product-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;margin-top:28px}
+.product-card{background:#fff;border:1px solid var(--line);padding:32px;border-top:4px solid var(--blue)}
+.product-card .product-name{font-family:'circe-slab-a',Rockwell,'Iowan Old Style',Georgia,serif;font-size:31px;line-height:1.15;margin:0 0 8px}
+.product-card .product-type{font-size:12px;text-transform:uppercase;letter-spacing:.09em;font-weight:700;color:var(--blue-dark);margin-bottom:18px}
+.product-card h4{font-size:15px;text-transform:uppercase;letter-spacing:.04em;margin:24px 0 7px}
+.product-card p{color:var(--muted)}
+.product-card .status{display:inline-block;margin-top:6px;padding:6px 10px;background:var(--paper);font-size:12px;font-weight:700}
+.ai-callout{margin-top:30px;border-left:3px solid var(--blue);padding:4px 0 4px 18px;color:var(--muted)}
+@media(max-width:760px){.principle-grid,.product-grid{grid-template-columns:1fr}.product-card{padding:26px}}
+</style><style>[id]{scroll-margin-top:155px}</style><style>
+.summary-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px;margin-top:28px}
+.summary-card{border-top:3px solid var(--blue);background:#fff;padding:30px;box-shadow:0 3px 16px #1012230b}
+.summary-card h3{margin:0 0 10px}.summary-card p{color:var(--muted);margin:0 0 20px}
+.summary-card .button{margin-top:4px}.resource-note{margin-top:32px;padding:20px 22px;background:var(--paper);border-left:4px solid var(--blue);color:var(--muted)}
+.ai-reference{padding:24px 26px;background:var(--paper);border-left:4px solid var(--blue);margin:24px 0}
+.ai-reference h3{margin-top:0!important}.ai-reference p:last-child{margin-bottom:0!important}
+@media(max-width:760px){.summary-grid{grid-template-columns:1fr}}
+.section-intro{display:grid;grid-template-columns:1.2fr .8fr;gap:70px;align-items:start;margin-bottom:34px}
+.section-intro p{color:var(--muted);font-size:17px;line-height:1.7;margin:0}
+.security-pillars{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:30px}
+.security-pillar{border-top:3px solid var(--blue);padding:24px 24px 22px;background:#fff;box-shadow:0 3px 16px #1012230b}
+.security-pillar .num{display:block;color:var(--blue-dark);font-size:12px;letter-spacing:.09em;font-weight:700;margin-bottom:18px}
+.security-pillar p{color:var(--muted);margin:0}
+.incident-callout{background:var(--navy);color:#fff;padding:34px 38px;margin:34px 0}
+.incident-callout h3{color:#fff;font-family:'circe-slab-a',Rockwell,Georgia,serif;font-weight:400;font-size:30px;margin:0 0 10px}
+.incident-callout p{color:#eef0f6;margin:0 0 20px;max-width:760px}
+.incident-callout .button{background:#fff;color:var(--navy);border-color:#fff}
+.response-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-top:28px;counter-reset:response-step}
+.response-step{background:#fff;border:1px solid var(--line);padding:26px 28px;position:relative;counter-increment:response-step}
+.response-step:before{content:counter(response-step,decimal-leading-zero);display:block;color:var(--blue-dark);font-size:12px;letter-spacing:.09em;font-weight:700;margin-bottom:14px}
+.response-step h3{font-size:19px;margin-bottom:8px}
+.response-step p{color:var(--muted);margin:0}
+.response-step.wide{grid-column:1/-1}
+@media(max-width:980px){.section-intro{grid-template-columns:1fr}.security-pillars{grid-template-columns:1fr 1fr}}
+@media(max-width:680px){.security-pillars,.response-grid{grid-template-columns:1fr}.response-step.wide{grid-column:auto}.incident-callout{padding:28px 24px}}
+</style>
+<style id="policy-viewer-style">
+.policy-viewer{position:fixed;inset:0;background:#fff;z-index:9999;display:none;flex-direction:column}
+.policy-viewer.open{display:flex}.policy-viewer-bar{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:16px 24px;border-bottom:1px solid #d7dbe5;background:#fff}.policy-viewer-title{font-weight:700;font-size:20px}.policy-viewer-close{border:2px solid #101223;border-radius:30px;background:#fff;padding:9px 18px;font-weight:700;cursor:pointer}.policy-viewer iframe{width:100%;height:calc(100vh - 70px);border:0;background:#fff}
+</style>
+<style>
+.request-link{font-family:inherit;font-size:inherit;cursor:pointer;text-decoration:underline;text-underline-offset:5px}
+dialog.request-dialog{border:0;padding:0;width:min(720px,calc(100% - 32px));max-height:90vh;border-radius:8px;box-shadow:0 24px 80px #10122355;color:var(--ink)}
+dialog.request-dialog::backdrop{background:#10122399}.request-dialog-inner{padding:34px}.request-dialog-head{display:flex;justify-content:space-between;gap:20px;align-items:start}.request-dialog h2{margin:0 0 12px}.request-dialog .close-request{border:0;background:#edeef2;border-radius:50%;width:38px;height:38px;font-size:24px;line-height:1;cursor:pointer}.request-dialog .form-intro{color:var(--muted);margin-bottom:24px}.request-form{display:grid;grid-template-columns:1fr 1fr;gap:18px}.request-form .full{grid-column:1/-1}.request-form label{display:block;font-weight:700;font-size:14px;margin-bottom:6px}.request-form input,.request-form textarea{width:100%;border:1px solid #b9bdc8;border-radius:4px;padding:11px 12px;font:inherit;color:var(--ink);background:#fff}.request-form textarea{min-height:92px;resize:vertical}.request-form .form-actions{grid-column:1/-1;display:flex;gap:12px;align-items:center;margin-top:4px}.request-form .helper{font-size:12px;color:var(--muted);margin:0}.request-form button.button{cursor:pointer}.required{color:#8a2432}@media(max-width:680px){.request-form{grid-template-columns:1fr}.request-form .full{grid-column:auto}.request-form .form-actions{grid-column:auto;align-items:flex-start;flex-direction:column}}
+</style>
+<style id="visual-continuity-style">
+/* Keep standalone narrative copy on a consistent readable measure. */
+.prose-measure,
+.section.soft > .wrap > p,
+.section.soft > .wrap > ul,
+.ai-detail > .wrap > .intro {max-width:900px;}
+.section.soft > .wrap > p + p{margin-top:14px;}
+.ai-detail > .wrap > .intro{margin-bottom:30px!important;}
+@media(max-width:980px){.prose-measure,.section.soft > .wrap > p,.section.soft > .wrap > ul,.ai-detail > .wrap > .intro{max-width:100%;}}
+</style>
+<style>
+.privacy-subnav{background:#fff;border-bottom:1px solid var(--line);box-shadow:0 2px 7px #1012230a}
+.privacy-subnav .wrap{display:flex;gap:30px;align-items:center;overflow:auto;scrollbar-width:thin}
+.privacy-subnav a{display:block;padding:14px 0 11px;border-bottom:3px solid transparent;color:var(--navy);text-decoration:none;font-size:14px;font-weight:700;white-space:nowrap}
+.privacy-subnav a:hover,.privacy-subnav a.active{color:var(--blue-dark);border-bottom-color:var(--blue)}
+@media(max-width:680px){.privacy-subnav .wrap{gap:22px}}
+</style></head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+<div class="site-header__inner wrap">
+<a aria-label="Carnegie Learning home" class="logo" href="https://www.carnegielearning.com/" style="display:flex;align-items:center;height:auto;overflow:visible;flex:0 0 auto;">
+<img alt="Carnegie Learning" src="data:image/webp;base64,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" style="width:170px;height:auto;max-width:none;max-height:none;object-fit:contain;display:block;"/>
+</a>
+<button aria-label="Open menu" class="menu-btn" type="button">Menu</button>
+<nav aria-label="Main navigation" class="main-nav">
+<a href="https://www.carnegielearning.com/solutions">Solutions</a>
+<a href="https://www.carnegielearning.com/why-cl/">Our Difference</a>
+<a class="current" href="#accessibility">Our Commitments</a>
+<a href="https://www.carnegielearning.com/company/">Company</a>
+<a class="talk" href="https://www.carnegielearning.com/contact-us/">Let's Talk</a>
+</nav>
+</div>
+<div class="commitment-nav">
+<div aria-label="Our Commitments" class="commitment-tabs wrap" role="tablist">
+<button aria-controls="accessibility" aria-selected="true" class="commitment-tab" data-tab="accessibility" id="tab-accessibility" role="tab">Accessibility</button>
+<button aria-controls="responsible-ai" aria-selected="false" class="commitment-tab" data-tab="responsible-ai" id="tab-ai" role="tab" tabindex="-1">Responsible AI</button>
+<button aria-controls="privacy-practices" aria-selected="false" class="commitment-tab" data-tab="privacy-practices" id="tab-privacy" role="tab" tabindex="-1">Privacy Policies &amp; Practices</button>
+<button aria-controls="security-practices" aria-selected="false" class="commitment-tab" data-tab="security-practices" id="tab-security" role="tab" tabindex="-1">Security Practices</button>
+</div>
+</div>
+</header>
+<main id="main" tabindex="-1">
+<section aria-hidden="false" aria-labelledby="tab-accessibility" class="panel is-active" id="accessibility" role="tabpanel" tabindex="0">
+<div class="hero"><div class="hero-grid wrap"><div><p class="eyebrow">Our Commitments / Accessibility</p><h1>Born Accessible.</h1><p class="lead">Every learner deserves a meaningful way to participate.</p><p class="intro">Our accessibility work is focused on providing equitable learning experiences for all students, giving educators clear information about our products, and providing practical support when access barriers come up.</p></div><aside aria-hidden="true" class="hero-card"><small>A commitment to every learner</small><strong>More ways in.<br/>More possibilities ahead.</strong><p>Designed with intention.<br/>Supported by people.<br/>Improved through practice.</p></aside></div></div>
+<div class="section wrap"><div class="section-head"><h2>One commitment.<br/>Four ways we put it to work.</h2><p>Accessibility is an ongoing responsibility, from the first design decision to the day-to-day classroom experience.</p></div><div class="four"><article class="pillar"><span class="num">01 / DESIGN</span><h3>Start with access.</h3><p>Born Accessible brings accessibility into new and substantially revised learning experiences, from requirements and content authoring through design, development, and delivery.</p></article><article class="pillar"><span class="num">02 / DEMONSTRATE</span><h3>Informed by independent evaluation.</h3><p>Product evaluation and independent testing inform our accessibility documentation. Request an Accessibility Conformance Report through our Accessibility Team for the product you use.</p></article><article class="pillar"><span class="num">03 / PROVIDE ACCESS</span><h3>Support participation.</h3><p>Accessible Pathways help educators navigate known barriers in legacy products. Customer Support connects you with program-specific guidance and available options.</p></article><article class="pillar"><span class="num">04 / IMPROVE</span><h3>Keep moving forward.</h3><p>Customer feedback and testing inform review and remediation. Program-specific accessibility issues are considered as titles come up for revision.</p></article></div></div>
+<div class="section soft" id="pathways"><div class="wrap"><p class="eyebrow">Evidence &amp; practical support</p><h2>Understand your product.<br/>Find your pathway.</h2><div class="grid2"><article class="card"><span class="label">For product evaluation</span><h3>Accessibility Conformance Reports</h3><p>An Accessibility Conformance Report (ACR) helps you understand a product’s accessibility features and known limitations, with details about the version and experience evaluated.</p><p>ACRs are available upon request through the <strong>Accessibility Team</strong>. The team can help identify the appropriate report and explain its scope.</p><button class="textlink request-link" data-request="acr" type="button">How to request an ACR ↗</button></article><article class="card"><span class="label">For the classroom</span><h3>Accessible Pathways</h3><p>For older products with accessibility limitations, Accessible Pathways provide guidance to help teachers and districts support equitable participation. Depending on the program and learner’s needs, this may include alternative ways to access content or educator-supported activities.</p><p>Access this guidance through our <strong>Customer Support</strong> network. Available pathways and materials vary by program.</p><button class="textlink request-link" data-request="pathway" type="button">Connect with Customer Support ↗</button></article></div><p class="note" style="margin-top:26px">Accessible Pathways address classroom participation needs. For details about a product’s accessibility features, our Accessibility Team can provide you with the relevant Accessibility Conformance Report(s) (ACR).</p><div class="team"><div><span class="label" style="color:var(--lime)">People behind the commitment</span><h3>Shared responsibility.<br/>Specialist expertise.</h3><div class="chips"><span>Academics</span><span>Product Management</span><span>Product Operations</span><span>Engineering</span></div></div><p>Our cross-functional accessibility team connects instructional quality, product development, product delivery and technical development. We also work with an independent accessibility specialist for testing and ACR updates, bringing an outside perspective to evaluation and improvement.</p></div></div></div>
+<div class="section wrap faq"><p class="eyebrow">A clearer picture</p><h2>Your accessibility questions.</h2><details><summary>What does Born Accessible mean for the products I use?</summary><p>Born Accessible guides the development of our next-generation learning experiences. Accessibility features vary across existing products, and some legacy programs have known limitations. Our Accessibility Team can help you understand your product’s ACR, while Customer Support can connect you with available Accessible Pathways.</p></details><details><summary>How does accessibility shape new content?</summary><p>The approach begins with structured content and accessible design choices at the source. Priorities include meaningful text alternatives, navigable reading structures, accessible mathematical expressions, and experiences that support assistive technology. Our Accessibility Team can help you explore the capabilities available in your product and version.</p></details><details><summary>What happens when I report a barrier?</summary><p>Customer Support gathers the product, activity, and access issue so the appropriate team can review it. The team considers available instructional pathways and needed improvements. Program-specific content issues are considered as titles come up for revision. Customer Support can help you explore available guidance for your current program.</p></details></div>
+<div class="band"><div class="wrap"><div><h2>Let’s find a way forward.</h2><p>Get documentation, explore support, or tell us about a barrier.</p></div><a class="button" href="https://www.carnegielearning.com/contact-us/">Get accessibility support ↗</a></div></div></section>
+<section aria-hidden="true" aria-labelledby="tab-ai" class="panel" id="responsible-ai" role="tabpanel" tabindex="0">
+<div class="hero"><div class="hero-grid wrap"><div><p class="eyebrow">Our Commitments / Responsible AI</p><h1>Responsible AI</h1><p class="intro">At Carnegie Learning, we believe AI should be a responsible, human-centered partner in education. Our AI-enabled products, services, and content development practices are designed to empower students, support educators, and enhance instruction through ethical, transparent, and pedagogy-driven use of technology.</p></div><aside aria-hidden="true" class="hero-card"><small>Responsible AI</small><strong>Human purpose.<br/>Thoughtful oversight.</strong><p>Principles, governance, and product-specific information.</p></aside></div></div>
+<div class="section wrap"><div class="section-intro"><h2>Our Guiding Principles</h2><p>Our approach prioritizes student success, safeguards data privacy, and maintains the critical role of educators, content experts, and human judgment in the learning process. We use AI to strengthen teaching and learning, not to replace the expertise, care, and decision-making that high-quality education requires.</p></div><div class="principle-grid" style="margin-top:34px"><article class="principle-card"><h3>Elevating Educators</h3><p>Recognizing the central role of teachers in education, we design AI to support educators with instructional insight, workflow support, and tools that can help them focus on student learning. AI may inform and support instructional decisions, but educators remain central to the learning experience.</p></article><article class="principle-card"><h3>Ethical, Transparent, and Equitable AI</h3><p>We design and review AI-enabled products and content with attention to fairness, accessibility, representation, and bias. When a student or educator interacts directly with a generative AI experience, we identify the experience as AI-enabled. When AI materially contributes to customer-facing products, content, or student experiences, we maintain governance processes that allow us to explain the role AI played and the human oversight applied.</p></article><article class="principle-card"><h3>Pedagogy-Driven and Coherent</h3><p>We develop AI solutions that align with evidence-based instructional practices, learning science, and Carnegie Learning’s standards for academic quality. AI is used to support student thinking, problem-solving, critical thinking, and active learning. Efficiency and automation must not come at the expense of instructional coherence, rigor, or assessment validity.</p></article><article class="principle-card"><h3>Purposeful Personalization</h3><p>AI-supported personalization may use information generated through a student’s use of our learning products when that use is authorized for the educational experience and permitted by applicable agreements and law. Where AI is used to support personalization, recommendations, or student-facing experiences, we apply safeguards appropriate to the use case. Personalized learning should preserve student agency, support collaboration, and remain grounded in sound pedagogy.</p></article><article class="principle-card"><h3>Human Oversight and Accountability</h3><p>AI may assist in content creation, instructional support, analysis, recommendations, and other learning experiences, but the level of human oversight depends on how the AI is being used. AI-assisted content intended for publication is subject to human review and approval before release. AI-supported recommendations, scoring, placement, or other instructional decisions are designed with appropriate human review or the ability for educators to exercise judgment where the use case requires it. Generative AI experiences that interact directly with users are governed through product-specific safeguards, testing, monitoring, and escalation processes appropriate to the experience. Carnegie Learning is responsible for establishing and maintaining the governance, validation, and safeguards appropriate to each AI-enabled use case.</p></article><article class="principle-card"><h3>Data Privacy and Responsible Stewardship</h3><p>When Carnegie Learning engages third-party AI providers, our contracts, vendor review process, and AI governance requirements prohibit the use of personally identifiable student data to train their AI models. When training our own models, we use aggregate data that does not contain personally identifiable information (PII). Student interaction data is handled in compliance with FERPA, COPPA, contractual obligations, and our internal privacy and security standards. Sensitive, confidential, or regulated data may only be used in approved environments.</p></article></div></div>
+<div class="section soft"><div class="wrap"><div class="section-intro"><h2>Our Commitment</h2><p>Our AI governance process includes review, documentation, release controls, and ongoing monitoring so that AI use in customer-facing products and content remains transparent, accountable, and auditable. As AI capabilities evolve, we will continue to refine our practices while staying grounded in our mission: helping students learn, supporting educators, and delivering high-quality instructional experiences built on trust.</p></div><div class="resource-note">For more information about how we protect customer data, visit our <a href="#security-practices">Security Practices</a>, <a href="privacy-policy.html">Privacy Policy</a>, and <a href="terms-of-use.html">Terms of Use</a>.</div></div></div>
+<div class="ai-detail" id="ai-products-document"><div class="wrap"><div class="section-intro"><h2>AI in Our Products</h2><p>Carnegie Learning uses different forms of AI and machine learning for different educational purposes. In MATHia, adaptive AI models student knowledge and adjusts feedback and practice as students work. In LiveHint AI, generative AI supports real-time conversational tutoring within a bounded instructional experience. Because these technologies play different roles, the safeguards, validation, monitoring, and human oversight we apply are tailored to the instructional purpose and risks of each experience. The examples below explain how AI supports each product, what users can expect, and the role educators and Carnegie Learning play in oversight.</p></div><div class="product-grid"><article class="product-card"><div class="product-type">Adaptive learning · Grades 6–12 mathematics</div><h3 class="product-name">MATHia®</h3><p>MATHia is an intelligent tutoring system that provides individualized, self-paced mathematics instruction. As students work step by step, MATHia estimates their knowledge at a detailed skill level and adapts the support and practice they receive.</p><h4>How AI supports the experience</h4><p>MATHia uses its student model to provide personalized just-in-time feedback and contextual hints, determine when additional practice is appropriate, and track progress toward mastery. Educators receive real-time and predictive information that can help them understand student progress and plan instruction.</p><h4>Role of the educator</h4><p>MATHia supports instruction rather than replacing it. Teachers use MATHia alongside classroom instruction and can use its reports and LiveLab information to respond to student needs.</p></article><article class="product-card"><div class="product-type">Generative AI tutoring · Middle &amp; high school mathematics</div><h3 class="product-name">LiveHint AI™</h3><p>LiveHint AI is a generative AI math tutor designed to help students understand problems rather than simply provide answers. It uses generative AI within a structured tutoring dialogue built around the mathematics problem a student is working on.</p><h4>How AI supports the experience</h4><p>Students can ask for help and respond conversationally, but the interaction is intentionally bounded to the problem at hand. Instructional prompts and product guardrails keep the dialogue focused on mathematical reasoning, common misconceptions, and productive next steps rather than open-ended conversation.</p><h4>How we manage generative AI</h4><p>LiveHint AI is clearly identified as an AI-enabled experience and is not intended to function as a general-purpose chatbot. Its guardrails constrain the conversation to the instructional context, and the experience is tested, monitored, and supported by escalation processes designed to promote safe and productive interactions. Because generative responses can still vary within those boundaries, LiveHint AI is designed to support learning and educator judgment rather than replace them.</p><h4>Current status</h4><p>LiveHint AI is a beta experience. It is governed separately from pre-authored AI-assisted content because it interacts with students dynamically in real time.</p><span class="status">Beta</span></article></div><div class="ai-callout">As our products and AI-enabled capabilities evolve, this section will be updated with additional product-specific information.</div></div></div>
+</section>
+<section aria-hidden="true" aria-labelledby="tab-privacy" class="panel" id="privacy-practices" role="tabpanel" tabindex="0"><nav aria-label="Privacy policies and practices" class="privacy-subnav"><div class="wrap"><a aria-current="page" class="active" href="#privacy-practices">Overview</a><a href="privacy-policy.html">Privacy Policy</a><a href="student-privacy-policy.html">Student Privacy Policy</a><a href="terms-of-use.html">Terms of Use</a></div></nav>
+<div class="hero"><div class="hero-grid wrap">
+<div><p class="eyebrow">Our Commitments / Privacy &amp; Security</p><h1>Privacy &amp;<br/>Security</h1><p class="lead">Clear information about how we handle data, protect our systems, and support your review.</p><p class="intro">Explore the policies and practices that apply to our websites, learning platforms, student information, and security program.</p></div>
+<aside aria-hidden="true" class="hero-card"><small>Privacy &amp; security</small><strong>Clear policies.<br/>Thoughtful safeguards.</strong><p>Information for schools, educators, students, and families.</p></aside>
+</div></div>
+<div class="section wrap">
+<div class="section-head"><h2>Find the information you need.</h2><p>Each resource below provides the full details for a different part of our privacy, security, and use practices.</p></div>
+<div class="summary-grid">
+<article class="summary-card"><span class="label">General Privacy</span><h3>Privacy Policy</h3><p>Explains how Carnegie Learning collects, uses, shares, and protects information across our websites, services, and Learning Platforms.</p><a class="button secondary" href="privacy-policy.html">View Privacy Policy →</a></article>
+<article class="summary-card"><span class="label">Student Privacy</span><h3>Student Privacy Policy</h3><p>Explains how student information is collected, used, shared, retained, and protected when students use our Learning Platforms through schools or other authorized providers.</p><a class="button secondary" href="student-privacy-policy.html">View Student Privacy Policy →</a></article>
+<article class="summary-card"><span class="label">Terms</span><h3>Terms of Use</h3><p>Sets out the terms that govern access to and use of Carnegie Learning websites, software, applications, and online services.</p><a class="button secondary" href="terms-of-use.html">View Terms of Use →</a></article>
+<article class="summary-card"><span class="label">Security</span><h3>Our Security Practices</h3><p>Learn about our security approach, independent attestations and certifications, and how we respond to unauthorized disclosure of student information.</p><a class="button secondary" href="#security-practices">View Security Practices →</a></article>
+</div>
+<div class="resource-note"><strong>Looking for information about AI?</strong> See <a href="#responsible-ai">Responsible AI</a> for our guiding principles, governance approach, and product-specific AI information.</div>
+</div></section>
+<section aria-hidden="true" aria-labelledby="tab-security" class="panel" id="security-practices" role="tabpanel" tabindex="0">
+<div class="hero"><div class="hero-grid wrap">
+<div><p class="eyebrow">Our Commitments / Security Practices</p><h1>Secure, Reliable,<br/>and Built for Education</h1><p class="lead">Security isn’t optional—it’s essential.</p><p class="intro">We take a proactive approach to safeguarding data through strict access policies, continuous system monitoring, and resilient infrastructure to help keep information secure, available, and protected from evolving threats.</p></div>
+<aside aria-hidden="true" class="hero-card"><small>Security &amp; trust</small><strong>Protect. Monitor.<br/>Respond.</strong><p>Safeguards, attestations, and incident-response practices.</p></aside>
+</div></div>
+<div class="section wrap"><div class="section-intro"><h2>How we protect information</h2><p>Security is built around practical controls that help protect information and keep our learning experiences available. Our approach combines controlled access, ongoing monitoring, and resilient infrastructure with independent assurance and a defined response process when an incident is suspected.</p></div>
+<div class="security-pillars"><article class="security-pillar"><span class="num">01 / ACCESS</span><h3>Control access.</h3><p>Strict access policies help limit access to systems and information to appropriate users and purposes.</p></article><article class="security-pillar"><span class="num">02 / MONITOR</span><h3>Watch continuously.</h3><p>Continuous system monitoring helps us identify and respond to evolving security threats.</p></article><article class="security-pillar"><span class="num">03 / RESILIENCE</span><h3>Design for reliability.</h3><p>Resilient infrastructure supports the security and availability of the information and learning experiences our customers rely on.</p></article></div></div>
+<div class="section soft"><div class="wrap"><div class="section-intro"><h2>Attestations &amp; Certifications</h2><p>Independent audits and certifications provide customers with additional assurance about the security controls supporting our products.</p></div>
+<div class="grid2"><article class="card"><span class="label">Independent attestation</span><h3>SOC 2 Type II</h3><p>SOC 2 Type II verifies that our security measures are continuously effective over time.</p><p><strong>Products:</strong> All ClearMath, ClearLiteracy, and ClearLanguages solutions<br/><strong>Region:</strong> U.S.<br/><strong>Criteria:</strong> Security<br/><strong>Latest Review Period:</strong> February 1, 2026 to July 31, 2026</p></article>
+<article class="card"><span class="label">State certification</span><h3>TX-RAMP</h3><p>TX-RAMP is a Texas state security certification that addresses standards for protecting sensitive data and compliance with state-level requirements.</p></article></div></div></div>
+<div class="section wrap"><div class="section-intro"><h2>When an incident is suspected</h2><p>We maintain a defined response process for suspected or actual unauthorized disclosure of student information. The goal is to move quickly from notification and containment to assessment, communication, and longer-term improvement.</p></div>
+<div class="incident-callout"><h3>Report a suspected unauthorized disclosure</h3><p>If you become aware of a potential unauthorized disclosure of student information, send the details to our Breach Response Team so the appropriate security, operational, and legal teams can begin review. Please do not include student-identifying information in the initial report.</p><button class="button" data-request="security" type="button">Report a security concern →</button></div>
+<div class="response-grid"><article class="response-step"><h3>Notify the district</h3><p>For a suspected or actual incident involving student information, we notify the district within 48 hours.</p></article><article class="response-step"><h3>Coordinate the response</h3><p>Our Breach Response Team convenes the appropriate operational, engineering, IT, security, and legal participants as needed.</p></article><article class="response-step"><h3>Contain and assess</h3><p>We take steps to contain the incident and determine what specific student information may have been accessed.</p></article><article class="response-step"><h3>Communicate with appropriate parties</h3><p>We determine a communication plan for the appropriate parties inside and outside Carnegie Learning.</p></article><article class="response-step wide"><h3>Reduce future risk and take appropriate action</h3><p>We evaluate near- and longer-term changes to systems and procedures that may reduce future risk and impact. Where possible, we identify those responsible and take appropriate action, including legal remedies.</p></article></div>
+<div class="resource-note" style="margin-top:34px"><strong>Privacy and data-use information:</strong> Review our <a href="privacy-policy.html">Privacy Policy</a>, <a href="student-privacy-policy.html">Student Privacy Policy</a>, and <a href="terms-of-use.html">Terms of Use</a>.</div></div>
+</section>
+</main>
+<dialog aria-labelledby="acr-request-title" class="request-dialog" id="acr-request-dialog"><div class="request-dialog-inner"><div class="request-dialog-head"><div><p class="eyebrow">Accessibility documentation</p><h2 id="acr-request-title">Request Accessibility Conformance Report(s)</h2></div><button aria-label="Close" class="close-request" type="button">×</button></div><p class="form-intro">Tell us what you are evaluating so our Accessibility Team can identify the appropriate report and provide information about its scope.</p><form class="request-form" id="acr-request-form"><div><label for="acr-name">Name <span class="required">*</span></label><input id="acr-name" name="Name" required=""/></div><div><label for="acr-email">Email <span class="required">*</span></label><input id="acr-email" name="Email" required="" type="email"/></div><div><label for="acr-org">School, district, or organization <span class="required">*</span></label><input id="acr-org" name="Organization" required=""/></div><div><label for="acr-product">Product or program <span class="required">*</span></label><input id="acr-product" name="Product or program" required=""/></div><div><label for="acr-version">Edition or version</label><input id="acr-version" name="Edition or version"/></div><div><label for="acr-component">Platform or component being evaluated</label><input id="acr-component" name="Platform or component"/></div><div class="full"><label for="acr-purpose">Purpose of the request</label><textarea id="acr-purpose" name="Purpose of request" placeholder="For example: district accessibility review, procurement, implementation planning..."></textarea></div><div class="full"><label for="acr-details">Additional information</label><textarea id="acr-details" name="Additional information"></textarea></div><div class="form-actions"><button class="button" type="submit">Request ACR(s) →</button><p class="helper">Submitting opens a pre-addressed email to accessibility@carnegielearning.com.</p></div></form></div></dialog>
+<dialog aria-labelledby="pathway-request-title" class="request-dialog" id="pathway-request-dialog"><div class="request-dialog-inner"><div class="request-dialog-head"><div><p class="eyebrow">Classroom accessibility support</p><h2 id="pathway-request-title">Request Information on Accessible Pathways</h2></div><button aria-label="Close" class="close-request" type="button">×</button></div><p class="form-intro">Share the product and access barrier so Customer Support can help identify available program-specific guidance.</p><form class="request-form" id="pathway-request-form"><div><label for="path-name">Name <span class="required">*</span></label><input id="path-name" name="Name" required=""/></div><div><label for="path-email">Email <span class="required">*</span></label><input id="path-email" name="Email" required="" type="email"/></div><div><label for="path-org">School, district, or organization <span class="required">*</span></label><input id="path-org" name="Organization" required=""/></div><div><label for="path-product">Product or program <span class="required">*</span></label><input id="path-product" name="Product or program" required=""/></div><div><label for="path-version">Edition or version</label><input id="path-version" name="Edition or version"/></div><div><label for="path-activity">Lesson or activity</label><input id="path-activity" name="Lesson or activity"/></div><div class="full"><label for="path-barrier">Describe the access barrier or support need <span class="required">*</span></label><textarea id="path-barrier" name="Access barrier or support need" required=""></textarea></div><div class="full"><label for="path-tech">Device, browser, or assistive technology</label><textarea id="path-tech" name="Device/browser/assistive technology"></textarea></div><div class="full"><label for="path-details">Additional information</label><textarea id="path-details" name="Additional information"></textarea></div><div class="form-actions"><button class="button" type="submit">Request Information on Accessible Pathways →</button><p class="helper">Submitting opens a pre-addressed email to customersupport@carnegielearning.com. Please do not include student-identifying information.</p></div></form></div></dialog>
+<dialog aria-labelledby="security-request-title" class="request-dialog" id="security-request-dialog"><div class="request-dialog-inner"><div class="request-dialog-head"><div><p class="eyebrow">Security incident reporting</p><h2 id="security-request-title">Report a Suspected Unauthorized Disclosure</h2></div><button aria-label="Close" class="close-request" type="button">×</button></div><p class="form-intro">Share enough information for our Breach Response Team to begin review. Please do not include student names, student IDs, passwords, or other student-identifying information in this form.</p><form class="request-form" id="security-request-form"><div><label for="sec-name">Name <span class="required">*</span></label><input id="sec-name" name="Name" required=""/></div><div><label for="sec-email">Email <span class="required">*</span></label><input id="sec-email" name="Email" required="" type="email"/></div><div><label for="sec-org">School, district, or organization <span class="required">*</span></label><input id="sec-org" name="Organization" required=""/></div><div><label for="sec-product">Product or platform</label><input id="sec-product" name="Product or platform"/></div><div><label for="sec-date">When was the issue discovered?</label><input id="sec-date" name="Date/time discovered"/></div><div><label for="sec-contact">Best phone number for follow-up</label><input id="sec-contact" name="Phone" type="tel"/></div><div class="full"><label for="sec-summary">What happened? <span class="required">*</span></label><textarea id="sec-summary" name="Incident summary" placeholder="Describe what you observed without including student-identifying information." required=""></textarea></div><div class="full"><label for="sec-scope">What type of information or system may be affected?</label><textarea id="sec-scope" name="Potentially affected information or system"></textarea></div><div class="full"><label for="sec-actions">Actions already taken</label><textarea id="sec-actions" name="Actions already taken"></textarea></div><div class="form-actions"><button class="button" type="submit">Send Security Report →</button><p class="helper">Submitting opens a pre-addressed email to breachresponseteam@carnegielearning.com.</p></div></form></div></dialog>
+<footer class="footer"><div class="wrap"><strong>Carnegie Learning · Our Commitments</strong><span>Accessibility · Responsible AI · Privacy Policies &amp; Practices · Security Practices</span></div></footer>
+<script>
+const tabs=[...document.querySelectorAll('[data-tab]')];
+const panels=[...document.querySelectorAll('.panel')];
+function activate(id,focus=false,updateHash=true){
+  if(!panels.some(p=>p.id===id)) return;
+  tabs.forEach(t=>{const on=t.dataset.tab===id;t.setAttribute('aria-selected',on?'true':'false');t.tabIndex=on?0:-1;if(on&&focus)t.focus();});
+  panels.forEach(p=>{const on=p.id===id;p.classList.toggle('is-active',on);p.setAttribute('aria-hidden',on?'false':'true');p.style.display=on?'block':'none';});
+  const active=tabs.find(t=>t.dataset.tab===id);
+  document.title=(active?active.textContent:'Our Commitments')+' | Carnegie Learning';
+  if(updateHash) history.replaceState(null,'','#'+id);
+  window.scrollTo({top:0,behavior:'auto'});
+}
+function navigateHash(){
+  const id=location.hash.slice(1);
+  if(!id){activate('accessibility',false,false);return;}
+  const panel=panels.find(p=>p.id===id);
+  if(panel){activate(id,false,false);return;}
+  const target=document.getElementById(id);
+  if(target){
+    const parent=target.closest('.panel');
+    if(parent){activate(parent.id,false,false);requestAnimationFrame(()=>target.scrollIntoView({block:'start'}));return;}
+  }
+  activate('accessibility',false,false);
+}
+tabs.forEach((t,i)=>{
+  t.addEventListener('click',()=>{history.pushState(null,'','#'+t.dataset.tab);navigateHash();});
+  t.addEventListener('keydown',e=>{
+    let n;
+    if(e.key==='ArrowRight') n=(i+1)%tabs.length;
+    if(e.key==='ArrowLeft') n=(i+tabs.length-1)%tabs.length;
+    if(e.key==='Home') n=0;
+    if(e.key==='End') n=tabs.length-1;
+    if(n!==undefined){e.preventDefault();history.pushState(null,'','#'+tabs[n].dataset.tab);navigateHash();tabs[n].focus();}
+  });
+});
+window.addEventListener('hashchange',navigateHash);
+navigateHash();
+
+const requestDialogs={acr:document.getElementById('acr-request-dialog'),pathway:document.getElementById('pathway-request-dialog'),security:document.getElementById('security-request-dialog')};
+document.querySelectorAll('[data-request]').forEach(btn=>btn.addEventListener('click',()=>{const d=requestDialogs[btn.dataset.request];if(d)d.showModal();}));
+document.querySelectorAll('.request-dialog .close-request').forEach(btn=>btn.addEventListener('click',()=>btn.closest('dialog').close()));
+document.querySelectorAll('.request-dialog').forEach(d=>d.addEventListener('click',e=>{if(e.target===d)d.close();}));
+function mailRequest(form,to,subject){const fd=new FormData(form);const lines=[];for(const [k,v] of fd.entries()){if(String(v).trim()) lines.push(k+': '+String(v).trim());}window.location.href='mailto:'+to+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(lines.join('\n\n'));}
+document.getElementById('acr-request-form').addEventListener('submit',e=>{e.preventDefault();mailRequest(e.currentTarget,'accessibility@carnegielearning.com','Accessibility Conformance Report Request');});
+document.getElementById('pathway-request-form').addEventListener('submit',e=>{e.preventDefault();mailRequest(e.currentTarget,'customersupport@carnegielearning.com','Accessible Pathways Information Request');});
+document.getElementById('security-request-form').addEventListener('submit',e=>{e.preventDefault();mailRequest(e.currentTarget,'breachresponseteam@carnegielearning.com','Suspected Unauthorized Disclosure Report');});
+
+</script>
+</body>
+</html>
